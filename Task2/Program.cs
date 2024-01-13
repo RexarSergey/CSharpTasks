@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -27,6 +28,7 @@ namespace Task2
         static void Rectangle()
         {
             Console.WriteLine("Задание про прямоугольник\n");
+            #region Ввод координат
             Console.WriteLine("Введите значение координат первой вершины: ");
 
             double X1 = Convert.ToDouble(Console.ReadLine());
@@ -36,6 +38,7 @@ namespace Task2
 
             double X2 = Convert.ToDouble(Console.ReadLine());
             double Y2 = Convert.ToDouble(Console.ReadLine());
+            #endregion
 
             double a = Math.Abs(X2 - X1);
             double b = Math.Abs(Y2 - Y1);
@@ -47,7 +50,7 @@ namespace Task2
         static void Triangle()
         {
             Console.WriteLine("Задание про треугольник\n");
-
+            #region Ввод координат
             Console.WriteLine("Введите значение координат первой вершины: ");
 
             double X1 = Convert.ToDouble(Console.ReadLine());
@@ -62,6 +65,7 @@ namespace Task2
 
             double X3 = Convert.ToDouble(Console.ReadLine());
             double Y3 = Convert.ToDouble(Console.ReadLine());
+            #endregion
 
             double a = Math.Sqrt(Math.Pow(X1 - X2, 2) + Math.Pow(Y1 - Y2, 2));
             double b = Math.Sqrt(Math.Pow(X1 - X3, 2) + Math.Pow(Y1 - Y3, 2));
@@ -82,6 +86,7 @@ namespace Task2
             Rectangle();
             Console.WriteLine(new string('-', 100));
             Triangle();
+
             Console.ReadKey();
         }
     }
