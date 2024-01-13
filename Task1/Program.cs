@@ -10,6 +10,9 @@ namespace Task1
     {
         static void Main(string[] args)
         {
+            // Remembering C# and testing git from VS
+            Console.WriteLine("Hello, World!");
+            Console.ReadKey();
         }
     }
 }
