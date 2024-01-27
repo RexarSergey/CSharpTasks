@@ -97,13 +97,13 @@ namespace Task19
             Console.WriteLine("Самый дорогой компьютер:");
             var s = computers
                 .OrderBy(comp => comp.Price)
-                .Last();
+                .LastOrDefault();
             Console.WriteLine($"{s.Code}\t{s.Mark}\t\t{s.Type}\t{s.Frequency}\t{s.RAM}\t{s.DriveMemory}\t{s.VideCardMemory}\t{s.Price}\t\t{s.Number}");
 
             Console.WriteLine("Самый дешевый компьютер:");
             s = computers
                 .OrderBy(comp => comp.Price)
-                .First();
+                .FirstOrDefault();
             Console.WriteLine($"{s.Code}\t{s.Mark}\t\t{s.Type}\t{s.Frequency}\t{s.RAM}\t{s.DriveMemory}\t{s.VideCardMemory}\t{s.Price}\t\t{s.Number}");
 
             Console.WriteLine("Есть ли хотя-бы один компьютер в количестве не менее 30 штук?");
